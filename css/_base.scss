@@ -1,0 +1,31 @@
+$colorNoche: #091E3F;
+$coloClaro: #6AC6DE;
+$colorBase: #ffffff;
+$fontFamily: "Open Sans", Arial, Helvetica, sans-serif;
+
+@mixin colorBase {
+    color: $colorBase;
+    font-weight: 500;
+    text-decoration: none;
+}
+@mixin fontNoche {
+    color: $colorNoche;
+    font-weight: 700;
+    font-family: $fontFamily;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+
+@mixin fontClaro {
+    color: $coloClaro;
+    font-weight: 600;
+    font-family: $fontFamily;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+@mixin tablet {
+    @media screen and (max-width: 60rem) {@content};
+}
+@mixin phone {
+    @media screen and (max-width: 48rem) {@content};
+}
