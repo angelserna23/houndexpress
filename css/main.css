@@ -118,6 +118,25 @@ body {
     font-size: 0.3em;
   }
 }
+.main .barra {
+  background-color: #ff0000;
+}
+.main .barra .barra__text {
+  color: #ff0000;
+  margin: 1rem 0;
+  padding: 0.8rem 0;
+}
+.main .fondo {
+  background-image: url(../img/fondo_pantalla.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position-x: center;
+  width: 100%;
+}
+.main .fondo .fondo__text {
+  color: #000000;
+}
 .main .page .page__title {
   background: url(https://blog.qupos.com/hs-fs/hubfs/mejorar-logistica-erp-2.png?width=1600&name=mejorar-logistica-erp-2.png);
   background-size: 100%;

@@ -102,6 +102,28 @@ body {
             font-size: .3em;
         }
     }
+    .barra {
+        background-color: #ff0000;
+
+        .barra__text {
+            color: #ff0000;
+            margin: 1rem 0;
+            padding: .8rem 0;
+        }
+    }
+
+    .fondo {
+        background-image: url(../img/fondo_pantalla.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position-x: center;
+        width: 100%;
+
+        .fondo__text {
+            color: #000000;
+        }
+    }
 
     .page {
 
