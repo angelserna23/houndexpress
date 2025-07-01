@@ -1,0 +1,1204 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 15px;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.header .header__img {
+  width: 20%;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 60rem) {
+  .header .header__img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header .header__img {
+    width: 80%;
+  }
+}
+.header .header__img-menu {
+  position: relative;
+  cursor: pointer;
+  margin-right: 2rem;
+  box-sizing: border-box;
+  width: 2vw;
+  /*Diseño para tablets*/
+}
+.header .header__img-menu:hover {
+  border-radius: 50%;
+  transition: all 0.4s ease-in;
+  background-color: #f3f3f3;
+}
+@media screen and (max-width: 60rem) {
+  .header .header__img-menu {
+    width: 4vw;
+  }
+}
+.header .header__nav {
+  display: flex;
+  position: fixed;
+  right: -200%;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 70%;
+  background-color: #091E3F;
+  padding: 30px 0;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.header .header__nav .header__nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 4px;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 60rem) {
+  .header .header__nav .header__nav-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+.header .header__nav .header__nav-link:hover {
+  background-color: #6AC6DE;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  transform: scale(1.1);
+  padding: 1px 1px;
+}
+@media screen and (max-width: 60rem) {
+  .header .header__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+    width: 30%;
+    padding: 5px 5px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header .header__nav {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 5px;
+  }
+}
+.header .header__nav.show {
+  right: 0;
+}
+@media screen and (max-width: 60rem) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 15px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.main {
+  /*---Formulario para registro de guias---*/
+  /*Data para formulario*/
+  /*Formulario*/
+  /*---Estado general de guias---*/
+  /*---Lista de guias---*/
+}
+.main .slogan .slogan__title {
+  background-color: #6AC6DE;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  font-size: 3em;
+  margin: 15px 15px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 60rem) {
+  .main .slogan {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .slogan {
+    font-size: 0.3em;
+  }
+}
+.main .barra {
+  background-color: #ff0000;
+}
+.main .barra .barra__text {
+  color: #ff0000;
+  margin: 1rem 0;
+  padding: 0.8rem 0;
+}
+.main .introduction {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 1rem;
+  gap: 10px;
+  align-items: flex-start;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.main .introduction .carousel__varios {
+  position: relative;
+  width: 100%;
+  max-width: 52vw;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.main .introduction .carousel__varios .carousel__container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+.main .introduction .carousel__varios .carousel__slide {
+  min-width: 100%;
+  display: none;
+}
+.main .introduction .carousel__varios .carousel__slide.active {
+  display: block;
+}
+.main .introduction .carousel__varios .carousel__slide .carousel__slide-img {
+  width: 100%;
+  display: block;
+}
+.main .introduction .carousel__varios .carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.main .introduction .carousel__varios .carousel__btn:hover {
+  opacity: 0.5;
+}
+.main .introduction .carousel__varios .prev {
+  left: 10px;
+}
+.main .introduction .carousel__varios .next {
+  right: 10px;
+}
+@media screen and (max-width: 60rem) {
+  .main .introduction .carousel__varios {
+    max-width: 94vw;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .introduction .carousel__varios {
+    max-width: 100vw;
+  }
+}
+.main .introduction .video {
+  border: none;
+  text-align: center;
+}
+.main .introduction .video .video__media {
+  width: 100%;
+  border-radius: 20px;
+}
+.main .introduction .video .video__text {
+  color: #091E3F;
+  font-weight: 700;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 48rem) {
+  .main .introduction .video .video__text {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+.main .introduction .video .video__img {
+  width: 10%;
+}
+@media screen and (max-width: 60rem) {
+  .main .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main .page .page__title {
+  background: url(https://blog.qupos.com/hs-fs/hubfs/mejorar-logistica-erp-2.png?width=1600&name=mejorar-logistica-erp-2.png);
+  background-size: 100%;
+  background-position: center;
+  background-position-y: 31%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  font-size: 3em;
+  color: #091E3F;
+  font-weight: 700;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.main .page .page__title .page__title-hypertext {
+  background-color: #091E3F;
+  color: #ffffff;
+  border-radius: 40px;
+  padding: 7px 7px;
+}
+@media screen and (max-width: 60rem) {
+  .main .page .page__title {
+    padding: 0;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .page .page__title {
+    padding: 0;
+    font-size: 1em;
+  }
+}
+.main .data {
+  display: flex;
+  justify-content: center;
+}
+.main .data .data__info {
+  padding-right: 15rem;
+  /*Diseño para telefonos*/
+}
+.main .data .data__info .data-title {
+  color: #091E3F;
+}
+.main .data .data__info .data-text {
+  color: #091E3F;
+}
+@media screen and (max-width: 48rem) {
+  .main .data .data__info {
+    padding-right: 0;
+  }
+}
+.main .form__general {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.main .form__general .form {
+  border: 2px solid black;
+  padding: 1rem 1rem;
+  background-color: #6AC6DE;
+  border-radius: 20px;
+}
+.main .form__general .form .form__label {
+  color: #000000;
+  display: block;
+  color: #091E3F;
+  font-weight: 700;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.main .form__general .form .form__input {
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.main .form__general .form .form__guia {
+  margin-bottom: 2rem;
+  display: flex;
+}
+.main .form__general .form .form__guia .form__label {
+  font-size: 1rem;
+  width: 100%;
+  margin: 0;
+}
+.main .form__general .form .form__origen {
+  margin-bottom: 2rem;
+}
+.main .form__general .form .form__destino {
+  margin-bottom: 2rem;
+}
+.main .form__general .form .form__fecha {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.main .form__general .form .form__fecha .form__date {
+  border-radius: 30px;
+  border: 2px solid #091E3F;
+  padding: 5px 10px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+.main .form__general .form .form__estado {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.main .form__general .form .form__estado .form__select {
+  border: 2px solid #091E3F;
+  border-radius: 30px;
+  padding: 5px 5px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.main .form__general .form .form__button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.main .form__general .form .form__button .form__send {
+  color: #091E3F;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.main .form__general .form .form__button .form__send:hover {
+  color: #ffffff;
+  background-color: #091E3F;
+  transition: all 0.25s linear;
+  transform: scale(1.1);
+}
+.main .form__general .form__logo {
+  display: flex;
+  justify-content: center;
+}
+.main .form__general .form__logo .form__logo-img {
+  width: 100%;
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 48rem) {
+  .main .form__general .form__logo .form__logo-img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .main .form__general {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .form__general {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main .status {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 1rem 23rem;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.main .status .status__numero {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.main .status .status__numero .status__logo {
+  width: 30%;
+}
+.main .status .status__numero .status__logo .status__logo-img {
+  width: 100%;
+}
+.main .status .status__numero .status__info {
+  width: 100%;
+}
+.main .status .status__numero .status__info .status__info-title {
+  color: #091E3F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+.main .status .status__numero .status__info .status__info-number {
+  font-size: 2rem;
+  color: #1d3557;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.main .status .status__numero .status__info .status__info-descripcion {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+.main .status .status__transito {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row-reverse;
+  justify-content: right;
+  gap: 10px;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.main .status .status__transito .status__logo {
+  width: 30%;
+}
+.main .status .status__transito .status__logo .status__logo-img {
+  width: 100%;
+}
+.main .status .status__transito .status__info {
+  width: 100%;
+}
+.main .status .status__transito .status__info .status__info-title {
+  color: #091E3F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+.main .status .status__transito .status__info .status__info-number {
+  font-size: 2rem;
+  color: #1d3557;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.main .status .status__transito .status__info .status__info-descripcion {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+.main .status .status__entregadas {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.main .status .status__entregadas .status__logo {
+  width: 26%;
+}
+.main .status .status__entregadas .status__logo .status__logo-img {
+  width: 100%;
+  border-radius: 50%;
+}
+.main .status .status__entregadas .status__info {
+  width: 100%;
+}
+.main .status .status__entregadas .status__info .status__info-title {
+  color: #091E3F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+.main .status .status__entregadas .status__info .status__info-number {
+  font-size: 2rem;
+  color: #1d3557;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.main .status .status__entregadas .status__info .status__info-descripcion {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+@media screen and (max-width: 60rem) {
+  .main .status {
+    margin: 1rem 7rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .status {
+    margin: 1rem 1rem;
+  }
+}
+.main .list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.main .list .list__logo .list__logo-img {
+  width: 100%;
+  border-radius: 20px;
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__logo .list__logo-img {
+    width: 0;
+  }
+}
+.main .list .list__general {
+  box-sizing: border-box;
+}
+.main .list .list__general .list__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  /*Diseño para telefonos*/
+}
+.main .list .list__general .list__data .list__info {
+  width: 70%;
+  /*Diseño para tablets*/
+}
+.main .list .list__general .list__data .list__info .list__info-title {
+  color: #091E3F;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  /*Diseño para tablets*/
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__data .list__info .list__info-title {
+    font-size: 1.2rem;
+  }
+}
+.main .list .list__general .list__data .list__info .list__info-text {
+  color: #091E3F;
+  font-size: 1rem;
+  font-weight: 500;
+  /*Diseño para tablets*/
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__data .list__info .list__info-text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__data .list__info {
+    width: 60%;
+  }
+}
+.main .list .list__general .list__data .list__button .list__button-update {
+  padding: 2px 20px;
+  background-color: #ffffff;
+  color: #091E3F;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  /*Diseño para telefonos*/
+}
+.main .list .list__general .list__data .list__button .list__button-update:hover {
+  background-color: #091E3F;
+  color: #ffffff;
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__data .list__button .list__button-update {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__data {
+    gap: 10px;
+  }
+}
+.main .list .list__general .list__tb {
+  width: 100%;
+  /*Diseño para telefonos*/
+}
+.main .list .list__general .list__tb .list__table {
+  border: 1px solid black;
+}
+.main .list .list__general .list__tb .list__table .list__table-header .list__table-header-row .list__table-header-row--title {
+  color: #091E3F;
+  border: 1px solid black;
+  padding: 5px 15px;
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__tb .list__table .list__table-header .list__table-header-row .list__table-header-row--title {
+    padding: 5px 2px;
+    font-size: 0.7rem;
+  }
+}
+.main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info {
+  color: #091E3F;
+  border: 1px solid black;
+  padding: 20px 15px;
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info {
+    padding: 5px 2px;
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__tb {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .main .list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+  }
+}
+
+.footer .info {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  background-color: #091E3F;
+  gap: 30px;
+  /*Diseño para telefonos*/
+}
+.footer .info .info__form {
+  background-color: #71b8cb;
+  box-sizing: border-box;
+  padding: 3rem 3rem;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  /*Diseño para tablets*/
+}
+.footer .info .info__form .info__nombre {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer .info .info__form .info__nombre .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .info .info__form .info__nombre .info__form-input {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  width: 100%;
+}
+.footer .info .info__form .info__email {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer .info .info__form .info__email .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .info .info__form .info__email .info__form-input {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  width: 100%;
+}
+.footer .info .info__form .info__contacto {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer .info .info__form .info__contacto .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .info .info__form .info__contacto .info__form-input {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  width: 100%;
+}
+.footer .info .info__form .info__mensaje {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer .info .info__form .info__mensaje .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .info .info__form .info__mensaje .info__form-input {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  width: 100%;
+}
+.footer .info .info__form .info__mensaje {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.footer .info .info__form .info__mensaje .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .info .info__form .info__mensaje .info__form-input {
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  width: 100%;
+}
+.footer .info .info__form .info__checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer .info .info__form .info__checkbox .info__form-label {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+}
+.footer .info .info__form .info__checkbox .info__form-checkbox {
+  height: 25px;
+  width: 25px;
+  margin: 0;
+  cursor: pointer;
+}
+.footer .info .info__form .info__checkbox .info__checkbox-send {
+  margin: 1.5rem;
+}
+.footer .info .info__form .info__checkbox .info__checkbox-send .info__checkbox-button {
+  font-size: 1.5em;
+  background-color: #091E3F;
+  color: #ffffff;
+  border: 1px solid #091E3F;
+  padding: 4px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 60rem) {
+  .footer .info .info__form {
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+  }
+}
+.footer .info .mensaje {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /*Diseño para telefonos*/
+}
+.footer .info .mensaje .mensaje__text {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.2em;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.footer .info .mensaje .mensaje__text .mensaje__text-stay {
+  font-size: 1.7em;
+  font-weight: 700;
+  /*Diseño para tablets*/
+}
+@media screen and (max-width: 60rem) {
+  .footer .info .mensaje .mensaje__text .mensaje__text-stay {
+    font-size: 1.2em;
+  }
+}
+.footer .info .mensaje .mensaje__text .mensaje__text-distance {
+  color: #6AC6DE;
+  font-size: 1.7em;
+  font-weight: 700;
+  /*Diseño para tablets*/
+}
+@media screen and (max-width: 60rem) {
+  .footer .info .mensaje .mensaje__text .mensaje__text-distance {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .footer .info .mensaje .mensaje__text {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .info .mensaje .mensaje__text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .info .mensaje {
+    display: flex;
+    box-sizing: border-box;
+    width: auto;
+    margin: 1rem 1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer .separacion {
+  background-color: #091E3F;
+  color: #091E3F;
+  font-weight: 700;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  margin: 0;
+  padding: 3rem 0;
+  /*Diseño para tablets*/
+}
+@media screen and (max-width: 60rem) {
+  .footer .separacion {
+    padding: 1rem 0;
+  }
+}
+.footer .socialMedia {
+  background-color: #091E3F;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: auto;
+  padding-bottom: 5rem;
+  /*Diseño para telefonos*/
+}
+.footer .socialMedia .socialMedia__redes {
+  width: 25%;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.footer .socialMedia .socialMedia__redes .socialMedia__logo {
+  width: 100%;
+}
+.footer .socialMedia .socialMedia__redes .redes {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-right: 3rem;
+}
+.footer .socialMedia .socialMedia__redes .redes .redes__logo-img:hover {
+  transition: transform 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+.footer .socialMedia .socialMedia__redes .socialMedia__text {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 48rem) {
+  .footer .socialMedia .socialMedia__redes .socialMedia__text {
+    margin: 0 1rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .footer .socialMedia .socialMedia__redes {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .socialMedia .socialMedia__redes {
+    width: 100%;
+  }
+}
+.footer .socialMedia .socialMedia__interfaz {
+  width: 15%;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__interfaz-text {
+  font-size: 2em;
+  font-weight: 700;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__interfaz-text .socialMedia__interfaz-text-highlight {
+  color: #6AC6DE;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav .socialMedia__nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav .socialMedia__nav-link:hover {
+  color: #6AC6DE;
+  transition: transform 0.2s ease;
+  font-size: 1.1em;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav .socialMedia__nav-text {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav .socialMedia__nav-text:hover {
+  color: #6AC6DE;
+  transition: transform 0.2s ease;
+  font-size: 1.1em;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav-services {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 1.2rem;
+  position: fixed;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav-services.services {
+  position: relative;
+  opacity: 1;
+  max-height: 500px;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav-services .socialMedia__nav-link-services {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  padding-left: 0.6rem;
+  font-size: 0.9rem;
+}
+.footer .socialMedia .socialMedia__interfaz .socialMedia__nav-services .socialMedia__nav-link-services:hover {
+  color: #6AC6DE;
+  transition: transform 0.2s ease;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 60rem) {
+  .footer .socialMedia .socialMedia__interfaz {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .socialMedia .socialMedia__interfaz {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer .socialMedia .socialMedia__contacto {
+  width: 25%;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__contacto-text {
+  font-size: 2em;
+  font-weight: 700;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__horario {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__horario .socialMedia__horario-text {
+  margin: 0;
+  font-weight: 600;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__contacto-mx {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__telefono {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__telefono .socialMedia__telefono-text {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__correo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__correo .socialMedia__correo-text {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-weight: 400;
+}
+.footer .socialMedia .socialMedia__contacto .socialMedia__contacto-eua {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 60rem) {
+  .footer .socialMedia .socialMedia__contacto {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .socialMedia .socialMedia__contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .socialMedia {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer .seguridad {
+  background-color: #6AC6DE;
+}
+.footer .seguridad .seguridad__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+.footer .seguridad .seguridad__nav .seguridad__nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  font-weight: 600;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
+}
+@media screen and (max-width: 60rem) {
+  .footer .seguridad .seguridad__nav .seguridad__nav-link {
+    margin: 0;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .seguridad .seguridad__nav .seguridad__nav-link {
+    margin: 0;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .footer .seguridad .seguridad__nav .seguridad__nav-link {
+    display: block;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .seguridad .seguridad__nav .seguridad__nav-link {
+    display: block;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .footer .seguridad .seguridad__nav {
+    display: block;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer .seguridad .seguridad__nav {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */

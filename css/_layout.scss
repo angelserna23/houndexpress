@@ -1,0 +1,1225 @@
+body {
+    margin: 0;
+    font-family: $fontFamily;
+    color: $colorBase;
+    width: 100%;
+}
+.header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 15px;
+
+    .header__img {
+        width: 20%;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            width: 50%;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 80%;
+        }
+    }
+
+    .header__img-menu {
+        position: relative;
+        cursor: pointer;
+        margin-right: 2rem;
+        box-sizing: border-box;
+        width: 2vw;
+
+        &:hover {
+            border-radius: 50%;
+            transition: all .4s ease-in;
+            background-color: #f3f3f3;
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            width: 4vw;
+        }
+    }
+
+    .header__nav {
+        display: flex;
+        position: fixed;
+        right: -200%;
+        justify-content: space-around;
+        box-sizing: border-box;
+        width: 70%;
+        background-color: $colorNoche;
+        padding: 30px 0;
+        border-radius: 40px;
+        transition: all .2s ease-in-out;
+
+        .header__nav-link {
+            @include colorBase;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 4px;
+
+            /*Diseño para tablets*/
+            @include tablet {
+                display: flex;
+                justify-content: center;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+            }
+
+            &:hover {
+                background-color: $coloClaro;
+                transition: transform .3s ease-in-out ;
+                border-radius: 10px;
+                transform: scale(1.1);
+                padding: 1px 1px;
+            }
+        }
+        /*Diseño para tablets*/
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: 10px;
+            width: 30%;
+            padding: 5px 5px;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 100%;
+            display: flex;
+            position: relative;
+            gap: 5px;
+        }
+
+        &.show {
+            right: 0;
+        }
+
+    }
+    /*Diseño para tablets*/
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin: 4rem 15px;
+    }
+    /*Diseño para telefonos*/
+    @include phone {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+.main {
+
+    .slogan {
+
+        .slogan__title {
+            background-color: $coloClaro;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000000;
+            font-size: 3em;
+            margin: 15px 15px;
+            border-radius: 10px;
+        }
+        @include tablet {
+            font-size: .6em;
+        }
+        @include phone {
+            font-size: .3em;
+        }
+    }
+    .barra {
+        background-color: #ff0000;
+
+        .barra__text {
+            color: #ff0000;
+            margin: 1rem 0;
+            padding: .8rem 0;
+        }
+    }
+
+    .introduction {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem 1rem;
+        gap: 10px;
+        align-items: flex-start;
+
+        .carousel__varios {
+        position: relative;
+        width: 100%;
+        max-width: 52vw;
+        overflow: hidden;
+        border-radius: 10px;
+
+            .carousel__container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 100%;
+            }
+
+            .carousel__slide {
+                min-width: 100%;
+                display: none;
+
+                &.active {
+                display: block;
+                }
+
+                .carousel__slide-img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .carousel__btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.4);
+                border: none;
+                color: white;
+                font-size: 2rem;
+                padding: 0.5rem;
+                cursor: pointer;
+                z-index: 10;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .next {
+                right: 10px;
+            }
+            
+            @include tablet {
+                max-width: 94vw;
+            }
+            @include phone {
+                max-width: 100vw;
+            }
+        }
+
+        .video {
+            border: none;
+            text-align: center;
+            .video__media {
+                width: 100%;
+                border-radius: 20px;
+            }
+
+            .video__text {
+                @include fontNoche;
+                margin-top: 2rem;
+                font-size: 2rem;
+                text-align: center;
+                font-weight: 700;
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    font-size: 1rem;
+                    margin: 0;
+                }
+            }
+
+            .video__img {
+                width: 10%;
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+
+    .page {
+
+        .page__title {
+            background: url(https://blog.qupos.com/hs-fs/hubfs/mejorar-logistica-erp-2.png?width=1600&name=mejorar-logistica-erp-2.png);
+            background-size: 100%;
+            background-position: center;
+            background-position-y: 31%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            justify-content: center;
+            font-size: 3em;
+             @include fontNoche;
+
+            .page__title-hypertext {
+                background-color: $colorNoche;
+                color: $colorBase;
+                border-radius: 40px;
+                padding: 7px 7px;
+            }
+
+             /*Diseño para tablets*/
+             @include tablet {
+                padding: 0;
+                font-size: 2.5em;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                padding: 0;
+                font-size: 1em;
+            }
+        }
+    }
+    /*---Formulario para registro de guias---*/
+    /*Data para formulario*/
+    .data {
+        display: flex;
+        justify-content: center;
+
+        .data__info {
+
+            padding-right: 15rem;
+
+            .data-title {
+                color: $colorNoche;
+            }
+            .data-text {
+                color: $colorNoche;
+            }
+
+            /*Diseño para telefonos*/
+            @include phone {
+                padding-right: 0;
+                
+            }
+        }
+        
+    }
+    /*Formulario*/
+    .form__general {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+
+        .form {
+            border: 2px solid black;
+            padding: 1rem 1rem;
+            background-color: $coloClaro;
+            border-radius: 20px;
+
+            .form__label {
+                color: #000000;
+                display: block;
+                @include fontNoche;
+                margin-bottom: .5rem;
+                font-size: 1rem;
+            }
+
+            .form__input {
+                border: none;
+                border-bottom: 1px solid #000000;
+                width: 100%;
+                background-color: transparent;
+                font-size: 1rem;
+                color: $colorBase;
+            }
+
+            .form__guia {
+                margin-bottom: 2rem;
+                display: flex;
+
+                .form__label {
+                    font-size: 1rem;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            .form__origen {
+                margin-bottom: 2rem;
+            }
+            .form__destino {
+                margin-bottom: 2rem;
+            }
+            .form__fecha {
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                box-sizing: border-box;
+
+                .form__date {
+                    border-radius: 30px;
+                    border: 2px solid $colorNoche;
+                    padding: 5px 10px;
+                    font-family: $fontFamily;
+                    background-color: $colorBase;
+                }
+            }
+            .form__estado {
+                margin-bottom: 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-sizing: border-box;
+
+                .form__select {
+                    border: 2px solid $colorNoche;
+                    border-radius: 30px;
+                    padding: 5px 5px;
+                    background-color: $colorBase;
+                    text-align: center;
+                    font-family: $fontFamily;
+                    font-weight: 600;
+                }
+
+            }
+            .form__button {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                .form__send {
+                    color: $colorNoche;
+                    font-size: 2rem;
+                    border-radius: 10px;
+                    background-color: white;
+                    padding: 0 1rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $colorBase;
+                        background-color: $colorNoche;
+                        transition: all .25s linear ;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .form__logo {
+            display: flex;
+            justify-content: center;
+
+            .form__logo-img {
+                width: 100%;
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    width: 50%;
+                }
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    /*---Estado general de guias---*/
+    .status {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 1rem 23rem;
+
+        .status__numero {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: row;
+            justify-content: left;
+            gap: 10px;
+            margin-bottom: 3rem;
+            align-items: center;
+            
+            .status__logo {
+                width: 30%;
+
+                .status__logo-img {
+                    width: 100%;
+                }
+            }
+
+            .status__info {
+                width: 100%;
+                
+                .status__info-title {
+                    color: $colorNoche;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin: 0;
+                    text-align: center;
+                }
+                .status__info-number {
+                    font-size: 2rem;
+                    color: #1d3557;
+                    font-weight: bold;
+                    margin: 0.5rem 0;
+                    text-align: center;
+                }
+                .status__info-descripcion {
+                    font-size: 1rem;
+                    color: #555;
+                    text-align: center;
+                }
+            }
+        }
+        .status__transito {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: row-reverse;
+            justify-content: right;
+            gap: 10px;
+            margin-bottom: 3rem;
+            align-items: center;
+
+            .status__logo {
+                width: 30%;
+
+                .status__logo-img {
+                    width: 100%;
+                }
+            }
+
+            .status__info {
+                width: 100%;
+
+                .status__info-title {
+                    color: $colorNoche;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin: 0;
+                    text-align: center;
+                }
+                .status__info-number {
+                    font-size: 2rem;
+                    color: #1d3557;
+                    font-weight: bold;
+                    margin: 0.5rem 0;
+                    text-align: center;
+                }
+                .status__info-descripcion {
+                    font-size: 1rem;
+                    color: #555;
+                    text-align: center;
+                }
+            }
+        }
+        .status__entregadas {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: row;
+            justify-content: left;
+            gap: 10px;
+            margin-bottom: 3rem;
+            align-items: center;
+
+            .status__logo {
+                width: 26%;
+
+                .status__logo-img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+
+            .status__info {
+                width: 100%;
+
+                .status__info-title {
+                    color: $colorNoche;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin: 0;
+                    text-align: center;
+                }
+                .status__info-number {
+                    font-size: 2rem;
+                    color: #1d3557;
+                    font-weight: bold;
+                    margin: 0.5rem 0;
+                    text-align: center;
+                }
+                .status__info-descripcion {
+                    font-size: 1rem;
+                    color: #555;
+                    text-align: center;
+                }
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            margin: 1rem 7rem;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            margin: 1rem 1rem;
+        }
+    }
+    /*---Lista de guias---*/
+    .list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 1rem 0;
+        box-sizing: border-box;
+        
+        .list__logo {
+
+            .list__logo-img {
+                width: 100%;
+                border-radius: 20px;
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    width: 0;
+                }
+            }
+        }
+
+        .list__general {
+            box-sizing: border-box;
+
+            .list__data {
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                align-items: center;
+                box-sizing: border-box;
+
+                .list__info {
+                    width: 70%;
+
+                    .list__info-title {
+                        color: $colorNoche;
+                        font-size: 1.8rem;
+                        font-weight: 800;
+                        margin: 0;
+
+                        /*Diseño para tablets*/
+                        @include tablet {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .list__info-text {
+                        color: $colorNoche;
+                        font-size: 1rem;
+                        font-weight: 500;
+
+                        /*Diseño para tablets*/
+                        @include tablet {
+                            font-size: .9rem;
+                        }
+                    }
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        width: 60%;
+                    }
+                }
+                .list__button {
+
+                    .list__button-update {
+                        padding: 2px 20px;
+                        background-color: $colorBase;
+                        color: $colorNoche;
+                        font-weight: 700;
+                        border-radius: 30px;
+                        font-size: 1.5rem;
+
+                        &:hover {
+                            background-color: $colorNoche;
+                            color: $colorBase;
+                            transition: all .30s linear ;
+                            transform: scale(1.1);
+                            cursor: pointer;
+                        }
+
+                        /*Diseño para telefonos*/
+                        @include phone {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    gap: 10px;
+                }
+            }
+            .list__tb {
+                width: 100%;
+
+                .list__table {
+                    border: 1px solid black;
+    
+                    .list__table-header {
+                        
+                        .list__table-header-row {
+                            
+                            .list__table-header-row--title {
+                                color: $colorNoche;
+                                border: 1px solid black;
+                                padding: 5px 15px;
+
+                                /*Diseño para telefonos*/
+                                @include phone {
+                                    padding: 5px 2px;
+                                    font-size: .7rem;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .list__table-body {
+    
+                        .list__table-body-row {
+                            
+                            .list__table-body-row-info {
+                                color: $colorNoche;
+                                border: 1px solid black;
+                                padding: 20px 15px;
+
+                                /*Diseño para telefonos*/
+                                @include phone {
+                                    padding: 5px 2px;
+                                    font-size: .7rem;
+                                }
+                            }
+                        }
+                    }
+                } 
+                
+                /*Diseño para telefonos*/
+                @include phone {
+                    display: flex;
+                    justify-content: center;
+                }     
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 1rem;
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem;
+        }
+    }
+
+}
+.footer {
+
+    .info {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        background-color: $colorNoche;
+        gap: 30px;
+    
+        .info__form {
+            background-color: #71b8cb;;
+            box-sizing: border-box;
+            padding: 3rem 3rem;
+            margin-top: .5rem;
+            border-radius: 10px;
+
+            .info__nombre {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                }
+            }
+            .info__email {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                }
+            }
+            .info__contacto {
+                width: 100%;
+                margin-bottom: 20px;
+                
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                }
+            }
+            .info__mensaje {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                }
+            }
+            .info__mensaje {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                }
+            }
+            .info__checkbox {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .info__form-label {
+                    @include colorBase;
+                }
+                .info__form-checkbox {
+                    height: 25px;
+                    width: 25px;
+                    margin: 0;
+                    cursor: pointer;
+                }
+
+                .info__checkbox-send {
+                    margin: 1.5rem;
+
+                    .info__checkbox-button {
+                        font-size: 1.5em;
+                        background-color: $colorNoche;
+                        color: $colorBase;
+                        border: 1px solid $colorNoche;
+                        padding: 4px 7px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        
+                    }
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                padding: 1rem 1rem;
+                margin: 1rem 1rem;
+                border-radius: 10px;
+            }
+        }
+
+        .mensaje {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+    
+            .mensaje__text {
+                @include colorBase;
+                font-size: 1.2em;
+    
+                .mensaje__text-stay {
+                    font-size: 1.7em;
+                    font-weight: 700;
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        font-size: 1.2em;
+                    }
+                }
+                .mensaje__text-distance {
+                    color: #6AC6DE;
+                    font-size: 1.7em;
+                    font-weight: 700;
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        font-size: 1.2em;
+                    }
+                }
+
+                /*Diseño para tablets*/
+                @include tablet {
+                    font-size: 1em;
+                }
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    width: 100%;
+                }
+            }
+
+            /*Diseño para telefonos*/
+            @include phone {
+                display: flex;
+                box-sizing: border-box;
+                width: auto;
+                margin: 1rem 1rem;
+                text-align: center;
+            }
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    .separacion {
+        background-color: $colorNoche;
+        @include fontNoche;
+        margin: 0;
+        padding: 3rem 0;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            padding: 1rem 0;
+        }
+    }
+    .socialMedia {
+        background-color: $colorNoche;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: auto;
+        padding-bottom: 5rem;
+
+        .socialMedia__redes {
+            width: 25%;
+
+            .socialMedia__logo {
+                width: 100%;
+            }
+
+            .redes {
+                display: flex;
+                justify-content: right;
+                gap: 10px;
+                margin-right: 3rem;
+
+                .redes__logo-img {
+
+                    &:hover {
+                        transition: transform .1s ease-in-out ;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .socialMedia__text {
+                display: flex;
+                align-items: center;
+
+                @include phone {
+                    margin: 0 1rem;
+                    margin-top: 1rem;
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 30%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+            }
+        }
+        .socialMedia__interfaz {
+            width: 15%;
+
+            .socialMedia__interfaz-text {
+                font-size: 2em;
+                font-weight: 700;
+
+                .socialMedia__interfaz-text-highlight {
+                    color: $coloClaro;
+                }
+            }
+
+            .socialMedia__nav {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .socialMedia__nav-link {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+
+                .socialMedia__nav-text {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    margin: 0;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+
+            }
+
+            .socialMedia__nav-services {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding-left: 1.2rem;
+                position: fixed;
+
+                &.services {
+                    position: relative;
+                    opacity: 1;
+                    max-height: 500px;
+                }
+
+                .socialMedia__nav-link-services {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+                    padding: .2rem 0;
+                    padding-left: .6rem;
+                    font-size: .9rem;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 20%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .socialMedia__contacto {
+            width: 25%;
+
+            .socialMedia__contacto-text {
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            .socialMedia__horario {
+                display: flex;
+                gap: 10px;
+                align-items:center;
+
+                .socialMedia__horario-text {
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+
+            .socialMedia__contacto-mx {
+                @include colorBase;
+                font-weight: 800;
+                font-size: 1.2em;
+                margin-bottom: 0;
+            }
+
+            .socialMedia__telefono {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 1rem 0;
+
+                .socialMedia__telefono-text {
+                    @include colorBase;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+            }
+
+            .socialMedia__correo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 1rem 0;
+
+                .socialMedia__correo-text {
+                    @include colorBase;
+                    font-weight: 400;
+                }
+            }
+
+            .socialMedia__contacto-eua {
+                @include colorBase;
+                font-weight: 800;
+                font-size: 1.2em;
+                margin-bottom: 0;
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 30%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .seguridad {
+        background-color: $coloClaro;
+
+        .seguridad__nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .seguridad__nav-link {
+                @include colorBase;
+                font-weight: 600;
+    
+                /*Diseño para tablets*/
+                @include tablet {
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                }
+    
+                /*Diseño para telefonos*/
+                @include phone {
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                }
+
+                /*Diseño para tablets*/
+                @include tablet {
+                    display: block;
+                }
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    display: block;
+                }
+             }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                display: block;
+            }
+
+            /*Diseño para telefonos*/
+            @include phone {
+                display: block;
+            }
+        }
+    }
+}
