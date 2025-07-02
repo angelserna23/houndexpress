@@ -331,6 +331,7 @@ body {
             padding: 1rem 1rem;
             background-color: $coloClaro;
             border-radius: 20px;
+            width: 20%;
 
             .form__label {
                 color: #000000;
@@ -388,7 +389,7 @@ body {
                 align-items: center;
                 box-sizing: border-box;
 
-                .form__select {
+                .form__select-status {
                     border: 2px solid $colorNoche;
                     border-radius: 30px;
                     padding: 5px 5px;
