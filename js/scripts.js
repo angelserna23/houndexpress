@@ -21,12 +21,12 @@ function registerGuide() {
 
     data.push(infoGuide);
 
-    alert("Se agrego correctamente la guia");
+    //alert("Se agrego correctamente la guia");
     console.log(data)
 }
 
 //Aqui le decimos que en el evento "submit" se agreguen los datos a nuestro array "data"
 form.addEventListener('submit', (e) => {
-    e.preventDefault;
+    e.preventDefault();
     registerGuide();
 });
