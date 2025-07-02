@@ -1,0 +1,1 @@
+const guideNumber = document.querySelector(".form__input.guide");
