@@ -40,28 +40,28 @@
         <article class="form__general">
             <form class="form">
                 <div class="form__guia">
-                    <label class="form__label" for="text">Numero de guia</label>
-                    <input class="form__input" type="text">
+                    <label class="form__label">Numero de guia</label>
+                    <input class="form__input guide" type="text">
                 </div>
                 <div>
-                    <label class="form__label" for="text">Destinatario*</label>
-                    <input class="form__input" type="text">
+                    <label class="form__label">Destinatario*</label>
+                    <input class="form__input destinatary" type="text" required>
                 </div>
                 <div class="form__origen">
-                    <label class="form__label" for="text">Origen*</label>
-                    <input class="form__input" type="text">
+                    <label class="form__label">Origen*</label>
+                    <input class="form__input origin" type="text" required>
                 </div>
                 <div class="form__destino">
-                    <label class="form__label" for="text">Destino*</label>
-                    <input class="form__input" type="text">
+                    <label class="form__label">Destino*</label>
+                    <input class="form__input destiny" type="text" required>
                 </div>
                 <div class="form__fecha">
-                    <label class="form__label" for="text">Fecha de creacion*</label>
-                    <input class="form__date" type="date">
+                    <label class="form__label">Fecha de creacion*</label>
+                    <input class="form__date date" type="date" required>
                 </div>
                 <div class="form__estado">
-                    <label class="form__label" for="text">Estado*</label>
-                    <select class="form__select">
+                    <label class="form__label">Estado*</label>
+                    <select class="form__select status" required>
                         <option value="">---Selecciona un estado---</option>
                         <option value="pendiente">Pendiente</option>
                         <option value="transito">En transito</option>
@@ -69,7 +69,7 @@
                     </select>
                 </div>
                 <div class="form__button">
-                    <button class="form__send">Registrar</button>
+                    <button class="form__send" type="submit">Registrar</button>
                 </div>
             </form>
             <section class="form__logo">
