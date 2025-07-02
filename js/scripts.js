@@ -28,7 +28,9 @@ function registerGuide() {
 }
 
 //Aqui le decimos que en el evento "submit" se agreguen los datos a nuestro array "data"
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    registerGuide();
-});
+if(registerBtn){
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        registerGuide();
+    });
+};
