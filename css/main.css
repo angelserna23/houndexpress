@@ -127,6 +127,7 @@ body {
   /*---Formulario para registro de guias---*/
   /*Data para formulario*/
   /*Formulario*/
+  /*Tabla de diseño de agregar las guias registradas previamente*/
   /*---Estado general de guias---*/
   /*---Lista de guias---*/
 }
@@ -335,6 +336,7 @@ body {
   padding: 1rem 1rem;
   background-color: #6AC6DE;
   border-radius: 20px;
+  width: 20%;
 }
 .main .form__general .form .form__label {
   color: #000000;
@@ -392,7 +394,7 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
-.main .form__general .form .form__estado .form__select {
+.main .form__general .form .form__estado .form__select-status {
   border: 2px solid #091E3F;
   border-radius: 30px;
   padding: 5px 5px;
@@ -445,6 +447,9 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+.main .guides .guides__table .guides__table-head .guides__table-head-row .guides__table-head-row-title {
+  color: black;
 }
 .main .status {
   display: flex;

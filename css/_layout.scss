@@ -449,6 +449,32 @@ body {
             flex-direction: column;
         }
     }
+    /*Tabla de diseño de agregar las guias registradas previamente*/
+    .guides {
+
+        .guides__table {
+
+            .guides__table-head {
+
+                .guides__table-head-row {
+
+                    .guides__table-head-row-title {
+                        color: black;
+                    }
+                }
+            }
+
+            .guides__table-body {
+
+                .guides__table-body-row {
+                    
+                    .guides__table-body-row-body {
+
+                    }
+                }
+            }
+        }
+    }
     /*---Estado general de guias---*/
     .status {
         display: flex;
