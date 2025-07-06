@@ -477,12 +477,61 @@ body {
     }
     /*Datos de diseño de agregar las guias registradas previamente*/
     .guides {
-        
-        .guide__titles {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        box-sizing: border-box;
+        padding: 1rem;
+
+        .guides__info {
+            border: 1.6px solid black;
+            margin: 0;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 10px;
             display: flex;
-            .guides__add-title {
-                color: black;
+            flex-direction: column;
+            background-color: #a0d3fd4f;
+            box-shadow: -7px 7px 15px #a9a5a5;
+
+            .guides__container {
+                display: flex;
+                box-sizing: border-box;
+                align-items: center;
+                gap: 4px;
+                justify-content: space-between;
+                border-bottom: 2px solid #000000;
+                margin-bottom: .5rem;
+
+                .guides__info-title {
+                    color: #1f2a49;
+                    margin: .2rem 0;
+                    font-size: 1.2rem;
+                }
+                .guides__info-text {
+                    color: #8a8a8a;
+                    margin: 0;
+                    font-size: .9rem;
+                    font-weight: 500;
+                }
             }
+            &:hover {
+                background-color: #78c2ff4f;
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 auto;
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
     /*---Estado general de guias---*/

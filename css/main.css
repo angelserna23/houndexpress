@@ -480,11 +480,62 @@ body {
     flex-direction: column;
   }
 }
-.main .guides .guide__titles {
-  display: flex;
+.main .guides {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
 }
-.main .guides .guide__titles .guides__add-title {
-  color: black;
+.main .guides .guides__info {
+  border: 1.6px solid black;
+  margin: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(160, 211, 253, 0.3098039216);
+  box-shadow: -7px 7px 15px #a9a5a5;
+}
+.main .guides .guides__info .guides__container {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 0.5rem;
+}
+.main .guides .guides__info .guides__container .guides__info-title {
+  color: #1f2a49;
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+}
+.main .guides .guides__info .guides__container .guides__info-text {
+  color: #8a8a8a;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.main .guides .guides__info:hover {
+  background-color: rgba(120, 194, 255, 0.3098039216);
+}
+@media screen and (max-width: 60rem) {
+  .main .guides {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .guides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .main .status {
   display: flex;
