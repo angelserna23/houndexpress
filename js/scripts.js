@@ -26,7 +26,13 @@ function registerGuide() {
     if(!infoGuide.number || !infoGuide.destinatary || !infoGuide.origin || !infoGuide.destiny || !infoGuide.date  || !infoGuide.status) {
         alert("Favor de ingresar todos los datos el formulario");
         return;
+    };
+    
+    if (isNaN(number(infoGuide.number))) {
+        alert("Esta ingresando el Numero de guia con caracteres no numericos");
+        return
     }
+
 
     /*Aqui creamos el section que va a ser para la tarjeta*/
     const createSection = document.createElement("section");
@@ -163,7 +169,8 @@ function registerGuide() {
     document.querySelector(".guides").appendChild(createSection);
 
     void createSection.offsetWidth;
-    createSection.classList.add("showGuides");
+
+    createSection.classList.add("showGuides"); // Aqui mandamos a llamar al diseño que se vea fluido
 
     form.reset();
 }
