@@ -27,11 +27,6 @@ function registerGuide() {
         alert("Favor de ingresar todos los datos el formulario");
         return;
     };
-    
-    if (isNaN(number(infoGuide.number))) {
-        alert("Esta ingresando el Numero de guia con caracteres no numericos");
-        return
-    }
 
 
     /*Aqui creamos el section que va a ser para la tarjeta*/
