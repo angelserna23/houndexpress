@@ -744,30 +744,6 @@ body {
                         width: 60%;
                     }
                 }
-                .list__button {
-
-                    .list__button-update {
-                        padding: 2px 20px;
-                        background-color: $colorBase;
-                        color: $colorNoche;
-                        font-weight: 700;
-                        border-radius: 30px;
-                        font-size: 1.5rem;
-
-                        &:hover {
-                            background-color: $colorNoche;
-                            color: $colorBase;
-                            transition: all .30s linear ;
-                            transform: scale(1.1);
-                            cursor: pointer;
-                        }
-
-                        /*Diseño para telefonos*/
-                        @include phone {
-                            font-size: .9rem;
-                        }
-                    }
-                }
 
                 /*Diseño para telefonos*/
                 @include phone {
@@ -805,7 +781,7 @@ body {
                             .list__table-body-row-info {
                                 color: $colorNoche;
                                 border: 1px solid black;
-                                padding: 20px 15px;
+                                text-align: center;
 
                                 /*Diseño para telefonos*/
                                 @include phone {

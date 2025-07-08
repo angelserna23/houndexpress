@@ -18,7 +18,13 @@ function registerGuide() {
         origin: origin.value.trim(),
         destiny: destiny.value.trim(),
         date: date.value,
-        status: statusGuide.value
+        status: statusGuide.value,
+        history: [
+            {
+                date: new Date().toLocaleString(),
+                status: statusGuide.value
+            }
+        ]
     };
 
     data.push(infoGuide);
@@ -27,11 +33,6 @@ function registerGuide() {
         alert("Favor de ingresar todos los datos el formulario");
         return;
     };
-    
-    if (isNaN(number(infoGuide.number))) {
-        alert("Esta ingresando el Numero de guia con caracteres no numericos");
-        return
-    }
 
 
     /*Aqui creamos el section que va a ser para la tarjeta*/
