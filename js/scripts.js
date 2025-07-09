@@ -16,11 +16,6 @@ const data = [...storeGuides]; //Aqui vamos agregando toda la informacion de la 
 /*Esta funcion nos permite darnos un peview de lo que acabamos de generar en nuestro register.html*/
 function registerGuide() {
 
-    if(!infoGuide.number || !infoGuide.destinatary || !infoGuide.origin || !infoGuide.destiny || !infoGuide.date  || !infoGuide.status) {
-        alert("Favor de ingresar todos los datos el formulario");
-        return;
-    };
-
     const infoGuide = {
         number: guideNumber.value.trim(),
         destinatary: destinatary.value.trim(),
@@ -34,6 +29,11 @@ function registerGuide() {
                 status: statusGuide.value
             }
         ]
+    };
+    
+    if(!infoGuide.number || !infoGuide.destinatary || !infoGuide.origin || !infoGuide.destiny || !infoGuide.date  || !infoGuide.status) {
+        alert("Favor de ingresar todos los datos el formulario");
+        return;
     };
 
     data.push(infoGuide);
@@ -270,7 +270,7 @@ function insertGuides() {
 
         /*Agregamos toda esta informacion al body de la fila de la tabla*/
         document.querySelector("list__table-body").appendChild(row);
-        
+
     });
 }
 
