@@ -754,6 +754,7 @@ body {
                 width: 100%;
                 padding: 0 1rem;
                 box-sizing: border-box;
+                overflow-x: auto;
 
                 .list__table {
                     border-collapse: collapse; /*Esta linea nos permite colocar bordes en diferentes partes de tablas*/
@@ -827,8 +828,16 @@ body {
                 /*Diseño para telefonos*/
                 @include phone {
                     display: flex;
-                    justify-content: center;
-                }     
+                    justify-content: space-between;
+                    overflow-x: auto;
+                }  
+                
+                /*Diseño para tablets*/
+                @include tablet {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                }
             }
         }
 
@@ -844,7 +853,7 @@ body {
         /*Diseño para telefonos*/
         @include phone {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             flex-direction: column;
             align-items: center;
             margin: 0 1rem;

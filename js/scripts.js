@@ -30,7 +30,7 @@ function registerGuide() {
             }
         ]
     };
-    
+
     if(!infoGuide.number || !infoGuide.destinatary || !infoGuide.origin || !infoGuide.destiny || !infoGuide.date  || !infoGuide.status) {
         alert("Favor de ingresar todos los datos el formulario");
         return;
@@ -185,6 +185,7 @@ Aqui vamos a mover los datos de:
 */
 
 function insertGuides() {
+
     const storeGuides = JSON.parse(localStorage.getItem("guides")) || [];
 
     storeGuides.forEach(guide => {
@@ -269,7 +270,8 @@ function insertGuides() {
         row.appendChild(rowHistory);
 
         /*Agregamos toda esta informacion al body de la fila de la tabla*/
-        document.querySelector("list__table-body").appendChild(row);
+        const tbody = document.querySelector("list__table-body");
+        tbody.appendChild(row);
 
     });
 }
