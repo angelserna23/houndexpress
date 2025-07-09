@@ -270,7 +270,7 @@ function insertGuides() {
         row.appendChild(rowHistory);
 
         /*Agregamos toda esta informacion al body de la fila de la tabla*/
-        const tbody = document.querySelector("list__table-body");
+        const tbody = document.querySelector(".list__table-body");
         tbody.appendChild(row);
 
     });
