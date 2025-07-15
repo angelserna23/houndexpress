@@ -775,7 +775,7 @@ body {
 .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info {
   color: #091E3F;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #000000;
   /*Diseño para telefonos*/
 }

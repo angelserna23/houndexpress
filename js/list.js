@@ -78,12 +78,6 @@ function insertGuides() {
 
         const spanHistory = document.createElement("span");
         spanHistory.classList.add("historial");
-
-        //Aqui agregamos el evento para mostrar el historial de modificaciones de guia
-        spanHistory.addEventListener('click', () => { // Evento de mostrar el historial de actualizaciones
-            //mostrarHistorial(guide, row);
-        });
-
         spanHistory.textContent = "Desplegar";
 
         const imgHistory = document.createElement("img");
