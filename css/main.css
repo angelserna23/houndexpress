@@ -745,7 +745,9 @@ body {
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
+  overflow-x: auto;
   /*Diseño para telefonos*/
+  /*Diseño para tablets*/
 }
 .main .list .list__general .list__tb .list__table {
   border-collapse: collapse; /*Esta linea nos permite colocar bordes en diferentes partes de tablas*/
@@ -790,6 +792,12 @@ body {
   align-items: center;
   cursor: pointer;
 }
+.main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .historial .historial__img {
+  transition: transform 0.4s ease;
+}
+.main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .historial .historial__img.rotate {
+  transform: rotate(180deg);
+}
 .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info--button {
   padding: 0.2rem 1.2rem;
   background-color: #091E3F;
@@ -804,10 +812,21 @@ body {
   color: #000000;
   transition: all 0.2s ease-in;
 }
+.main .list .list__general .list__tb .list__table .list__table-body .historial-row .list__table-body-row-info .list__table-body-row-info-historial .list__table-body-row-info-content {
+  color: black;
+}
 @media screen and (max-width: 48rem) {
   .main .list .list__general .list__tb {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__tb {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (max-width: 60rem) {
@@ -822,7 +841,7 @@ body {
 @media screen and (max-width: 48rem) {
   .main .list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
