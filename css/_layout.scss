@@ -39,7 +39,11 @@ body {
 
         /*Diseño para tablets*/
         @include tablet {
-            width: 4vw;
+            width: 0;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 0;
         }
     }
 
@@ -67,9 +71,6 @@ body {
                 display: flex;
                 justify-content: center;
             }
-            /*Diseño para telefonos*/
-            @include phone {
-            }
 
             &:hover {
                 background-color: $coloClaro;
@@ -87,6 +88,8 @@ body {
             gap: 10px;
             width: 30%;
             padding: 5px 5px;
+            right: 0;
+            position: relative;
         }
         /*Diseño para telefonos*/
         @include phone {
@@ -94,6 +97,8 @@ body {
             display: flex;
             position: relative;
             gap: 5px;
+            right: 0;
+            position: relative;
         }
 
         &.show {
@@ -770,6 +775,10 @@ body {
                                 font-size: 1rem;
                                 padding: 0 2.5rem;
 
+                                /*Diseño para tablets*/
+                                @include tablet {
+                                    padding: 0 1rem;
+                                }
                                 /*Diseño para telefonos*/
                                 @include phone {
                                     padding: 5px 2px;
@@ -828,19 +837,66 @@ body {
     
                                     transition: all .2s ease-in;
                                 }
+
+                                /*Diseño para tablets*/
+                                @include tablet {
+                                    padding: 0 .5rem;
+                                    font-size: .9rem;
+                                }
+
+                                /*Diseño para telefonos*/
+                                @include phone {
+                                    padding: 0 .5rem;
+                                    font-size: .6rem;
+                                }
                             }
                         }
                         .historial-row {
 
                             .list__table-body-row-info {
-
+                                border: 1px solid #000000;
                                 .list__table-body-row-info-historial {
                                     
                                     .list__table-body-row-info-content {
-                                        color: black;
+                                        color: #000000;
+                                        text-align: right;
+                                        font-size: .7rem;
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        //Fecha de ultima modificacion
+                        th:nth-child(5),
+                        td:nth-child(5) {
+                            display: none;
+                        }
+                        th:nth-child(4),
+                        td:nth-child(4) {
+                            display: none;
+                        }
+                    }
+
+                    /*Diseño para telefonos*/
+                    @include phone {
+                        //Fecha de ultima modificacion
+                        th:nth-child(5),
+                        td:nth-child(5) {
+                            display: none;
+                        }
+                        //Fecha de creacion
+                        th:nth-child(4),
+                        td:nth-child(4) {
+                            display: none;
+                        }
+
+                        //Origen
+                        th:nth-child(3),
+                        td:nth-child(3) {
+                            display: none;
                         }
                     }
                 } 

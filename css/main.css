@@ -37,6 +37,7 @@ body {
   box-sizing: border-box;
   width: 2vw;
   /*Diseño para tablets*/
+  /*Diseño para telefonos*/
 }
 .header .header__img-menu:hover {
   border-radius: 50%;
@@ -45,7 +46,12 @@ body {
 }
 @media screen and (max-width: 60rem) {
   .header .header__img-menu {
-    width: 4vw;
+    width: 0;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .header .header__img-menu {
+    width: 0;
   }
 }
 .header .header__nav {
@@ -71,7 +77,6 @@ body {
   box-sizing: border-box;
   gap: 4px;
   /*Diseño para tablets*/
-  /*Diseño para telefonos*/
 }
 @media screen and (max-width: 60rem) {
   .header .header__nav .header__nav-link {
@@ -94,6 +99,8 @@ body {
     gap: 10px;
     width: 30%;
     padding: 5px 5px;
+    right: 0;
+    position: relative;
   }
 }
 @media screen and (max-width: 48rem) {
@@ -102,6 +109,8 @@ body {
     display: flex;
     position: relative;
     gap: 5px;
+    right: 0;
+    position: relative;
   }
 }
 .header .header__nav.show {
@@ -752,6 +761,8 @@ body {
 .main .list .list__general .list__tb .list__table {
   border-collapse: collapse; /*Esta linea nos permite colocar bordes en diferentes partes de tablas*/
   width: 100%;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
 }
 .main .list .list__general .list__tb .list__table .list__table-header .list__table-header-row {
   border: 1px solid black;
@@ -760,7 +771,13 @@ body {
   color: #091E3F;
   font-size: 1rem;
   padding: 0 2.5rem;
+  /*Diseño para tablets*/
   /*Diseño para telefonos*/
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__tb .list__table .list__table-header .list__table-header-row .list__table-header-row--title {
+    padding: 0 1rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .main .list .list__general .list__tb .list__table .list__table-header .list__table-header-row .list__table-header-row--title {
@@ -806,14 +823,57 @@ body {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 20px;
+  /*Diseño para tablets*/
+  /*Diseño para telefonos*/
 }
 .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info--button:hover {
   background-color: #baf1ff;
   color: #000000;
   transition: all 0.2s ease-in;
 }
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info--button {
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__tb .list__table .list__table-body .list__table-body-row .list__table-body-row-info--button {
+    padding: 0 0.5rem;
+    font-size: 0.6rem;
+  }
+}
+.main .list .list__general .list__tb .list__table .list__table-body .historial-row .list__table-body-row-info {
+  border: 1px solid #000000;
+}
 .main .list .list__general .list__tb .list__table .list__table-body .historial-row .list__table-body-row-info .list__table-body-row-info-historial .list__table-body-row-info-content {
-  color: black;
+  color: #000000;
+  text-align: right;
+  font-size: 0.7rem;
+}
+@media screen and (max-width: 60rem) {
+  .main .list .list__general .list__tb .list__table th:nth-child(5),
+  .main .list .list__general .list__tb .list__table td:nth-child(5) {
+    display: none;
+  }
+  .main .list .list__general .list__tb .list__table th:nth-child(4),
+  .main .list .list__general .list__tb .list__table td:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .main .list .list__general .list__tb .list__table th:nth-child(5),
+  .main .list .list__general .list__tb .list__table td:nth-child(5) {
+    display: none;
+  }
+  .main .list .list__general .list__tb .list__table th:nth-child(4),
+  .main .list .list__general .list__tb .list__table td:nth-child(4) {
+    display: none;
+  }
+  .main .list .list__general .list__tb .list__table th:nth-child(3),
+  .main .list .list__general .list__tb .list__table td:nth-child(3) {
+    display: none;
+  }
 }
 @media screen and (max-width: 48rem) {
   .main .list .list__general .list__tb {
