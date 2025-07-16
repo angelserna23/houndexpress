@@ -561,7 +561,7 @@ body {
   /*Diseño para tablets*/
   /*Diseño para telefonos*/
 }
-.main .status .status__numero {
+.main .status .status__pendiente {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -570,30 +570,30 @@ body {
   margin-bottom: 3rem;
   align-items: center;
 }
-.main .status .status__numero .status__logo {
+.main .status .status__pendiente .status__logo {
   width: 30%;
 }
-.main .status .status__numero .status__logo .status__logo-img {
+.main .status .status__pendiente .status__logo .status__logo-img {
   width: 100%;
 }
-.main .status .status__numero .status__info {
+.main .status .status__pendiente .status__pendiente-info {
   width: 100%;
 }
-.main .status .status__numero .status__info .status__info-title {
+.main .status .status__pendiente .status__pendiente-info .status__pendiente-title {
   color: #091E3F;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-.main .status .status__numero .status__info .status__info-number {
+.main .status .status__pendiente .status__pendiente-info .status__pendiente-number {
   font-size: 2rem;
   color: #1d3557;
   font-weight: bold;
   margin: 0.5rem 0;
   text-align: center;
 }
-.main .status .status__numero .status__info .status__info-descripcion {
+.main .status .status__pendiente .status__pendiente-info .status__pendiente-descripcion {
   font-size: 1rem;
   color: #555;
   text-align: center;
@@ -613,24 +613,24 @@ body {
 .main .status .status__transito .status__logo .status__logo-img {
   width: 100%;
 }
-.main .status .status__transito .status__info {
+.main .status .status__transito .status__transito-info {
   width: 100%;
 }
-.main .status .status__transito .status__info .status__info-title {
+.main .status .status__transito .status__transito-info .status__transito-title {
   color: #091E3F;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-.main .status .status__transito .status__info .status__info-number {
+.main .status .status__transito .status__transito-info .status__transito-number {
   font-size: 2rem;
   color: #1d3557;
   font-weight: bold;
   margin: 0.5rem 0;
   text-align: center;
 }
-.main .status .status__transito .status__info .status__info-descripcion {
+.main .status .status__transito .status__transito-info .status__transito-descripcion {
   font-size: 1rem;
   color: #555;
   text-align: center;
@@ -651,24 +651,24 @@ body {
   width: 100%;
   border-radius: 50%;
 }
-.main .status .status__entregadas .status__info {
+.main .status .status__entregadas .status__entregadas-info {
   width: 100%;
 }
-.main .status .status__entregadas .status__info .status__info-title {
+.main .status .status__entregadas .status__entregadas-info .status__entregadas-title {
   color: #091E3F;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-.main .status .status__entregadas .status__info .status__info-number {
+.main .status .status__entregadas .status__entregadas-info .status__entregadas-number {
   font-size: 2rem;
   color: #1d3557;
   font-weight: bold;
   margin: 0.5rem 0;
   text-align: center;
 }
-.main .status .status__entregadas .status__info .status__info-descripcion {
+.main .status .status__entregadas .status__entregadas-info .status__entregadas-descripcion {
   font-size: 1rem;
   color: #555;
   text-align: center;

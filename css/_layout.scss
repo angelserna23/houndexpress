@@ -554,7 +554,7 @@ body {
         box-sizing: border-box;
         margin: 1rem 23rem;
 
-        .status__numero {
+        .status__pendiente {
             display: flex;
             box-sizing: border-box;
             flex-direction: row;
@@ -571,24 +571,24 @@ body {
                 }
             }
 
-            .status__info {
+            .status__pendiente-info {
                 width: 100%;
                 
-                .status__info-title {
+                .status__pendiente-title {
                     color: $colorNoche;
                     font-size: 1.5rem;
                     font-weight: 700;
                     margin: 0;
                     text-align: center;
                 }
-                .status__info-number {
+                .status__pendiente-number {
                     font-size: 2rem;
                     color: #1d3557;
                     font-weight: bold;
                     margin: 0.5rem 0;
                     text-align: center;
                 }
-                .status__info-descripcion {
+                .status__pendiente-descripcion {
                     font-size: 1rem;
                     color: #555;
                     text-align: center;
@@ -612,24 +612,24 @@ body {
                 }
             }
 
-            .status__info {
+            .status__transito-info {
                 width: 100%;
 
-                .status__info-title {
+                .status__transito-title {
                     color: $colorNoche;
                     font-size: 1.5rem;
                     font-weight: 700;
                     margin: 0;
                     text-align: center;
                 }
-                .status__info-number {
+                .status__transito-number {
                     font-size: 2rem;
                     color: #1d3557;
                     font-weight: bold;
                     margin: 0.5rem 0;
                     text-align: center;
                 }
-                .status__info-descripcion {
+                .status__transito-descripcion {
                     font-size: 1rem;
                     color: #555;
                     text-align: center;
@@ -654,24 +654,24 @@ body {
                 }
             }
 
-            .status__info {
+            .status__entregadas-info {
                 width: 100%;
 
-                .status__info-title {
+                .status__entregadas-title {
                     color: $colorNoche;
                     font-size: 1.5rem;
                     font-weight: 700;
                     margin: 0;
                     text-align: center;
                 }
-                .status__info-number {
+                .status__entregadas-number {
                     font-size: 2rem;
                     color: #1d3557;
                     font-weight: bold;
                     margin: 0.5rem 0;
                     text-align: center;
                 }
-                .status__info-descripcion {
+                .status__entregadas-descripcion {
                     font-size: 1rem;
                     color: #555;
                     text-align: center;
