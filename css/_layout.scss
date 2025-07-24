@@ -961,12 +961,18 @@ body {
                     @include colorBase;
                     display: flex;
                     flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
                 }
                 .info__form-input {
                     border: none;
                     border-bottom: 1px solid rgb(255, 255, 255);
                     background-color: transparent;
                     width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
                 }
             }
             .info__email {
@@ -977,12 +983,18 @@ body {
                     @include colorBase;
                     display: flex;
                     flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
                 }
                 .info__form-input {
                     border: none;
                     border-bottom: 1px solid rgb(255, 255, 255);
                     background-color: transparent;
                     width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
                 }
             }
             .info__contacto {
@@ -993,12 +1005,18 @@ body {
                     @include colorBase;
                     display: flex;
                     flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
                 }
                 .info__form-input {
                     border: none;
                     border-bottom: 1px solid rgb(255, 255, 255);
                     background-color: transparent;
                     width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
                 }
             }
             .info__mensaje {
@@ -1009,29 +1027,20 @@ body {
                     @include colorBase;
                     display: flex;
                     flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
                 }
                 .info__form-input {
                     border: none;
                     border-bottom: 1px solid rgb(255, 255, 255);
                     background-color: transparent;
                     width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
                 }
-            }
-            .info__mensaje {
-                width: 100%;
-                margin-bottom: 20px;
 
-                .info__form-label {
-                    @include colorBase;
-                    display: flex;
-                    flex-direction: column;
-                }
-                .info__form-input {
-                    border: none;
-                    border-bottom: 1px solid rgb(255, 255, 255);
-                    background-color: transparent;
-                    width: 100%;
-                }
             }
             .info__checkbox {
                 width: 100%;
@@ -1060,6 +1069,9 @@ body {
                         border-radius: 5px;
                         cursor: pointer;
                         
+                        &.select {
+                            font-size: 1.6rem;
+                        }
                     }
                 }
             }
